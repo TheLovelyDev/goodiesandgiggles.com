@@ -38,4 +38,36 @@ a {
   justify-content: center;
   height: 100vh;
   padding: 0 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.elephant {
+  width: clamp(150px, 20vw, 300px);
+  height: clamp(150px, 20vw, 300px);
+  position: absolute;
+}
+
+.elephant--one {
+  top: 10vh;
+  left: -50px;
+  transform: rotate(25deg);
+}
+
+.elephant--two {
+  top: -50px;
+  left: 60vw;
+  transform: rotate(-30deg);
+}
+
+.elephant--three {
+  top: 60vh;
+  right: -50px;
+  transform: rotate(25deg);
+}
+
+.elephant--four {
+  bottom: -50px;
+  left: 10vw;
+  transform: rotate(-20deg);
 }
