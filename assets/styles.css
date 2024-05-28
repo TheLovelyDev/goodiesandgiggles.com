@@ -1,0 +1,27 @@
+html {
+  background-color: var(--color-background);
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  font-family: "quador", serif;
+  font-weight: var(--weight-normal);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+}
+
+.bold {
+  font-weight: var(--weight-bold);
+}
