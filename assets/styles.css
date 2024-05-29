@@ -28,8 +28,15 @@ a {
 }
 
 .logo {
-  height: clamp(100px, 20vh, 200px);
+  width: clamp(100px, 65vw, 400px);
   max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .logo {
+    width: auto;
+    height: clamp(100px, 20vh, 200px);
+  }
 }
 
 .content {
@@ -37,8 +44,8 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  padding: 0 1rem;
+  height: 100dvh;
+  padding: 0 .5rem;
   position: relative;
   overflow: hidden;
 }
@@ -47,28 +54,55 @@ a {
   width: clamp(150px, 20vw, 250px);
   height: clamp(150px, 20vw, 250px);
   position: absolute;
+  transition: .5s;
 }
 
 .elephant--one {
-  top: 10vh;
+  top: 5vh;
   left: -50px;
   transform: rotate(25deg);
 }
 
+@media screen and (min-width: 600px) {
+  .elephant--one {
+    top: 10vh;
+  }
+}
+
 .elephant--two {
-  top: -50px;
-  left: 60vw;
+  top: -20px;
+  left: 70vw;
   transform: rotate(-30deg);
 }
 
+@media screen and (min-width: 600px) {
+  .elephant--two {
+    top: -50px;
+    left: 60vw;
+  }
+}
+
 .elephant--three {
-  top: 60vh;
+  bottom: clamp(0px, 8vw, 15vh);
   right: -50px;
   transform: rotate(25deg);
 }
 
+@media screen and (min-width: 600px) {
+  .elephant--three {
+    bottom: clamp(100px, 20vw, 15vh);
+  }
+}
+
 .elephant--four {
   bottom: -50px;
-  left: 10vw;
+  left: 0vw;
   transform: rotate(-20deg);
+}
+
+@media screen and (min-width: 600px) {
+  .elephant--four {
+    bottom: -50px;
+    left: 10vw;
+  }
 }
