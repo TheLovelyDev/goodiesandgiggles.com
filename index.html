@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'; base-uri 'none';">
+    <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'none';">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -33,7 +33,7 @@
   </head>
   <body>
     <div class="content">
-      <img src="assets/elephant.svg" alt="Goodies & Giggles Toy Store" class="elephant elephant--one" />
+      <img src="assets/elephant.svg" alt="Goodies & Giggles Toy Store" class="elephant elephant--one elephant--one--float" />
       <img src="assets/elephant.svg" alt="Goodies & Giggles Toy Store" class="elephant elephant--two" />
       <img src="assets/elephant.svg" alt="Goodies & Giggles Toy Store" class="elephant elephant--three" />
       <img src="assets/elephant.svg" alt="Goodies & Giggles Toy Store" class="elephant elephant--four" />
@@ -83,5 +83,15 @@
         Stay tuned for more updates.
       </p>
     </div>
+    <script>
+      const elephants = document.getElementsByClassName("elephant");
+
+      setInterval(() => {
+        const activeElephant = document.querySelector("[class$='--float']");
+        const randomElephant = elephants[Math.floor(Math.random()*elephants.length)];
+        activeElephant.classList.remove(`${activeElephant.classList[1]}--float`);
+        randomElephant.classList.add(`${randomElephant.classList[1]}--float`);
+      }, 6000);
+    </script>
   </body>
 </html>
