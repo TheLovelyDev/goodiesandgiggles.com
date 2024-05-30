@@ -109,19 +109,19 @@ a {
 }
 
 .elephant--one--float {
-  animation: float--one 6s ease-in-out infinite;
+  animation: float--one 6s ease-in-out;
 }
 
 .elephant--two--float {
-  animation: float--two 6s ease-in-out infinite;
+  animation: float--two 6s ease-in-out;
 }
 
 .elephant--three--float {
-  animation: float--three 6s ease-in-out infinite;
+  animation: float--three 6s ease-in-out;
 }
 
 .elephant--four--float {
-  animation: float--four 6s ease-in-out infinite;
+  animation: float--four 6s ease-in-out;
 }
 
 @keyframes float--one {
