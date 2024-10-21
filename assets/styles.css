@@ -50,6 +50,27 @@ a {
   overflow: hidden;
 }
 
+.socials {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.socials__link:hover .socials__icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 5px 3px rgba(0, 0, 0, 0.2));
+}
+
+.socials__icon {
+  height: 1.75rem;
+  width: 1.75rem;
+  fill: white;
+  transition: .5s;
+  will-change: filter;
+}
+
 .elephant {
   width: clamp(150px, 20vw, 250px);
   height: clamp(150px, 20vw, 250px);
